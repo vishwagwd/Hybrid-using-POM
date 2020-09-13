@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [parameter test]" guice-stage="DEVELOPMENT" verbose="10">
+  <listeners>
+    <listener class-name="com.ssm.ExtentReportListener.Extentreportlistener"/>
+    <listener class-name="com.parameters.MyTransformer"/>
+  </listeners>
+  <test thread-count="5" name="gmailcreateaccounttestt(failed)" verbose="10">
+    <parameter name="url" value="hhtps://google.com/"/>
+    <classes>
+      <class name="com.ssm.testcases.Loginpagetest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="validateloginpagetest"/>
+        </methods>
+      </class> <!-- com.ssm.testcases.Loginpagetest -->
+    </classes>
+  </test> <!-- gmailcreateaccounttestt(failed) -->
+</suite> <!-- Failed suite [parameter test] -->
