@@ -9,7 +9,7 @@ import com.ssm.Pages.Paymentspage;
 import com.ssm.Testbase.Testbase;
 
 public class Paymentpagetest extends Testbase{
-	
+	///commit
 	public Loginpage loginpage;
 	public Homepage homepage;
 	public Paymentspage paymentspage;
