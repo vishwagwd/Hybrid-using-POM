@@ -1,8 +1,6 @@
 package com.ssm.Testutil;
 
 
-
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,8 +18,8 @@ import com.ssm.Testbase.Testbase;
 public class Testutil extends Testbase{
 	public static Sheet sheet;
 	public static  Workbook book;
-	public static long IMPLICITLY_WAIT = 3;
-	public static long PAGE_LOAD_TIMEOUT = 3;
+	public static long IMPLICITLY_WAIT = 7;
+	public static long PAGE_LOAD_TIMEOUT = 8;
 	public static String TEST_SHEET_PATH = "";
 	
 	public static Object[][] getdata(String sheetname)
@@ -48,7 +46,8 @@ public class Testutil extends Testbase{
 		for(int i=0;i<sheet.getLastRowNum();i++) {
 			for(int k=0;k<sheet.getRow(0).getLastCellNum();k++) {
 				
-				data [i][k]= sheet.getRow(i+1).getCell(k).toString();			}
+				data [i][k]= sheet.getRow(i+1).getCell(k).toString();			
+				}
 		}
 		return data;
 	}

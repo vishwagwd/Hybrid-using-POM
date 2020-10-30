@@ -21,8 +21,8 @@ public class Loginpage extends Testbase
 	@FindBy(id = "btnOk")
 	WebElement submit;
 	
-	@FindBy(name = "CboFacilities")
-	WebElement fac;
+	/*@FindBy(name = "CboFacilities")
+	WebElement fac;*/
 	
 	
 	public Loginpage()
@@ -37,16 +37,19 @@ public class Loginpage extends Testbase
 	}
 	
 	
-	public void selectfacility(String facility)
+	/*public void selectfacility(String facility)
 	{
 		Select facy = new Select(fac);
 		facy.selectByVisibleText(facility);;
-	}
+	}*/
 	
-	public Homepage login(String un, String pwd)
+	public Homepage login()
 	{
-		username.sendKeys(un);
-		password.sendKeys(pwd);
+		String usercredential = getcredentials().get(1);
+		String [] splittedcredentials = usercredential.split(":");
+		
+		username.sendKeys(splittedcredentials[0]);
+		password.sendKeys(splittedcredentials[1]);
 		
 		submit.click();
 		

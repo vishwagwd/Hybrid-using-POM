@@ -27,8 +27,8 @@ public class Homepagetest extends Testbase
 		initialization();
 		
 		loginpage = new Loginpage();
-		loginpage.selectfacility(prop.getProperty("facility"));
-		loginpage.login(prop.getProperty("un"), prop.getProperty("pwd"));
+		//loginpage.selectfacility(prop.getProperty("facility"));
+		loginpage.login();
 		homepage = new Homepage();
 		
 	}

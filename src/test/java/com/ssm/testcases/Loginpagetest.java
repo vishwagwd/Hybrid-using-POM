@@ -44,7 +44,7 @@ public class Loginpagetest extends Testbase
 	public void validateloginpagetest()
 	{
 		String title = loginpage.validateloginpage();
-		Assert.assertEquals(title, "Log In2");
+		Assert.assertEquals(title, "e-SSM Home Page");
 		
 	}
 	
@@ -53,8 +53,8 @@ public class Loginpagetest extends Testbase
 	
 	public void loginpagetest()
 	{
-		loginpage.selectfacility(prop.getProperty("facility"));
-		loginpage.login(prop.getProperty("un"), prop.getProperty("pwd"));
+		//loginpage.selectfacility(prop.getProperty("facility"));
+		loginpage.login();
 		
 				
 	}

@@ -10,6 +10,7 @@
     <classes>
       <class name="com.ssm.testcases.Loginpagetest">
         <methods>
+          <include name="loginpagetest"/>
           <include name="setup"/>
           <include name="teardown"/>
           <include name="validateloginpagetest"/>

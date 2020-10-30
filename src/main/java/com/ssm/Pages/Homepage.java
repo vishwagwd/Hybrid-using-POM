@@ -15,6 +15,9 @@ public class Homepage extends Testbase
 	@FindBy(id="TabControl1_t2_")
 	WebElement rent;
 	
+	@FindBy(id="TabControl1_t4_")
+	WebElement payment;
+	
 	public Homepage()
 	{
 		PageFactory.initElements(driver, this);
@@ -25,13 +28,22 @@ public class Homepage extends Testbase
 	public Newrentalpage newrentalsclick()
 		{
 		
-		driver.switchTo().frame("close");
-		driver.switchTo().alert().dismiss();
+		driver.switchTo().frame("MainTabs");
+		System.out.println("Switched to frame");
 		rent.click();
 		
 		return new Newrentalpage();
 	}
 	
+	
+	public Paymentspage paymentpageclick()
+	{
+		driver.switchTo().frame("MainTabs");
+		System.out.println("Switched to frame");
+		payment.click();
+		
+		return new Paymentspage();
+	}
 	
 
 }

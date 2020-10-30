@@ -26,7 +26,7 @@ public class Printpopuppagetest extends Testbase
 		
 		initialization();
 		loginpage = new Loginpage();
-		homepage=loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
+		homepage=loginpage.login();
 		
 	}
 	
